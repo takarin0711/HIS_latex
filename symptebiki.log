@@ -1,0 +1,135 @@
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.1.6)  11 JUL 2017 05:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**symptebiki
+(./symptebiki.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./hissymp.cls
+hissymp.cls; Version 1.0 [Jan. 17, 2007]
+\h@=\dimen118
+\JQ=\dimen119
+\Q=\dimen120
+\@bs=\dimen121
+\Secbox=\box41
+\@qqvsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\@capnumbox=\box42
+\@tempboxb=\box43
+\capwidth=\dimen122
+\@abovecaptionskip=\dimen123
+\@belowcaptionskip=\dimen124
+\ecapwidth=\dimen125
+\@parc@ption=\box44
+\c@figure=\count86
+\c@table=\count87
+\abstractbox=\box45
+\keywordbox=\box46
+\year@cnt=\count88
+\c@subpage=\count89
+\mathindent=\dimen126
+\@minsofar=\count90
+\@min=\count91
+\@cite@temp=\count92
+\c@PROFILE=\count93
+\@heightofprofile=\dimen127
+\@profile=\box47
+\@heightofprofile=\dimen128
+\@profile=\box48
+) (c:/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(c:/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 91.
+
+(c:/texlive/2013/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+File: dvipdfmx.def 2014/06/07 v3.6 LaTeX graphics driver for dvipdfmx (TeX Live
+/ChoF)
+))
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+(./symptebiki.aux)
+\openout1 = `symptebiki.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 49.
+ [1
+
+
+]
+File: fig1.eps Graphic file (type eps)
+ <fig1.eps>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 147.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 147.
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 178.
+
+
+[2] [3] (./symptebiki.aux) ) 
+Here is how much of TeX's memory you used:
+ 770 strings out of 494001
+ 8076 string characters out of 6157278
+ 74863 words of memory out of 5000000
+ 4278 multiletter control sequences out of 15000+600000
+ 20912 words of font info for 80 fonts, out of 8000000 for 9000
+ 745 hyphenation exceptions out of 8191
+ 26i,10n,25p,416b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on symptebiki.dvi (3 pages, 20824 bytes).
