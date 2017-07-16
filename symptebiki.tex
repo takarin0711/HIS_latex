@@ -49,9 +49,13 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 
 \maketitle	
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{はじめに}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+アイデアはふとしたときに思い浮かぶことがあり、私達はそれを紙に書き留めたり、PCを利用してメモを取ることがある。しかし、アイデアが思い浮かぶのは座って作業しているときだけではなく、外で歩いているときや、机やホワイトボード等がないような場面でも突然思い浮かぶことがある。また、友人と話しているときにアイデアが連鎖的に思い浮かぶこともある。
+
 近年、HMD(Head Mounted Display)の普及により3D空間に文字を書くことが可能になった。現在、HMDに関する多くの研究は一人で特定の場所において使うことが想定されている。現状では外などの広い空間を利用し、複数人で利用することを想定した研究は少ない。そこで、本研究では浮かんだアイデアを書き留める際に、どこでも配置できるように広い空間で利用することを想定する。広い空間上にメモを残すことができ、複数人で利用できるようなインタラクションの提案を行う。
 
 
@@ -68,7 +72,7 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{提案するシステム}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ユーザが思い浮かんだふとしたアイデアを広い空間上の任意の場所に残すことができ、複数人で使用できるシステムを提案する。ハードウェアは可搬性を考慮して、HoloLensを使用する。システムの機能としては大きく分けて三つであり、以下に詳細を述べる。
+ユーザが思い浮かんだふとしたアイデアを広い空間上の任意の場所に残すことができ、複数人で使用できるシステムを提案する。ハードウェアは可搬性を考慮して、マイクロソフト社のHoloLens\cite{tex6}を使用する。システムの機能としては大きく分けて三つであり、以下に詳細を述べる。
 
 \subsection{メモを入力}
 実世界の任意の3D空間上に図形や文字のメモを残す。また、これらに加えて音声によるメモも残すことも実現する。
@@ -79,6 +83,7 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
   \begin{center}
     \includegraphics[clip,width=7.0cm]{./3d_draw.eps}
     \caption{3D描画によるメモ}
+    \ecaption{Ellipse and Pentagon.}
     \label{fig:3d_draw}
   \end{center}
 \end{figure}
@@ -90,6 +95,7 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
   \begin{center}
     \includegraphics[clip,width=7.0cm]{./tennomemo.eps}
     \caption{点の情報としてメモを残す}
+    \ecaption{Ellipse and Pentagon.}
     \label{fig:tennomemo}
   \end{center}
 \end{figure}
@@ -101,231 +107,76 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
   \begin{center}
     \includegraphics[clip,height=5.0cm,width=6.0cm]{./onpu_memo.eps}
     \caption{3D音符の透明度を変化}
+    \ecaption{Ellipse and Pentagon.}
     \label{fig:onpu_memo}
   \end{center}
 \end{figure}
 
 \subsection{メモを操作}
-広い空間上にメモを残す場合、近くにあるメモだけでなく、遠くにあるメモを移動させることも必要となる。そこで、遠くにあるメモを視線で選択をし、タップアンドホールドを維持した状態で移動させるインタラクションを提案する。また、視線上に複数のメモがある場合、どうやって選択するかという問題が発生することが考えられる。そこで、音声入力によってメモの選択の変更を行う手法を提案する(図\ref{fig:sentaku_memo})。
+広い空間上にメモを残す場合、近くにあるメモだけでなく、遠くにあるメモを移動させることも必要となる。そこで、遠くにあるメモを視線で選択をし、タップアンドホールドを維持した状態で移動させるインタラクションを提案する。また、視線上に複数のメモがある場合、その中の一つをどうやって選択するかという問題が発生することが考えられる。そこで、音声入力によってメモの選択の変更を行う手法を提案する(図\ref{fig:sentaku_memo})。
 
 \begin{figure}[h]
   \begin{center}
     \includegraphics[clip,height=5.0cm,width=6.0cm]{./sentaku_memo.eps}
     \caption{視線上の複数のメモを選択}
+    \ecaption{Ellipse and Pentagon.}
     \label{fig:sentaku_memo}
   \end{center}
 \end{figure}
 
+\begin{figure*}[t]
+  \begin{center}
+    \includegraphics[clip,height=10.0cm,width=14.0cm]{./sharing.eps}
+    \caption{アンカーを設置して位置合わせを行い共有}
+    \ecaption{Ellipse and Pentagon.}
+    \label{fig:sharing}
+  \end{center}
+\end{figure*}
+
 \subsection{メモを共有}
-実世界の任意の3D空間上に残したメモを他人に見せるには、HoloToolkit\cite{tex6}のSharing\cite{tex7}という機能を利用する。HoloToolkitとはHoloLens向けのアプリを効率的に開発するための機能を含んだツールキットのことである。また、HoloLensで3Dアプリを起動した場合、アプリ内の空間について起動時点のHoloLensの座標と向いている方向を起点として座標軸(0,0,0)、カメラ角(0,0,0)で処理される。このため、同じアプリを他の人が起動するときは寸分違わず同じ場所、同じ向きでアプリを起動しない限り、現実の空間の同じ位置で物体を共有することができないという問題が発生する。この問題を解決するためにはアンカーの共有を行う。アンカーとは船の錨の意味で空間内で絶対的な位置に居座ることができるオブジェクトのことである。これを設置することで位置合わせを行い、実世界の任意の3D空間上に残したメモの共有を行う。
-
-\subsection{文章の区切り}
-文章の区切りにはピリオド「．」または句点「。」を、句の区切りにはコンマ「，」または読点「、」を用い、1字分をあててください。句読点は、どちらでも結構ですが、「ピリオド・コンマ」、あるいは「句点・読点」に統一してください。なお、各段落の最初は1字分をあけてください。
-
+実世界の任意の3D空間上に残したメモを他人に見せるには、HoloToolkit\cite{tex7}のSharing\cite{tex8}という機能を利用し、Sharing用のサーバを介して空間の共有を行う。HoloToolkitとはHoloLens向けのアプリを効率的に開発するための機能を含んだツールキットのことである。また、HoloLensで3Dアプリを起動した場合、アプリ内の空間について起動時点のHoloLensの座標と向いている方向を起点として座標軸(0,0,0)、カメラ角(0,0,0)で処理される。このため、同じアプリを他の人が起動するときは寸分違わず同じ場所、同じ向きでアプリを起動しない限り、現実の空間の同じ位置で物体を共有することができないという問題が発生する。この問題を解決するためにはアンカーの共有を行う(図\ref{fig:sharing})。アンカーとは船の錨の意味で空間内で絶対的な位置に居座ることができるオブジェクトのことである。これを設置することで位置合わせを行い、実世界の任意の3D空間上に残したメモの共有を行う。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{数式など}
+\section{システムの試作}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+本システムを作成する前に、実際に動作するかどうか確認を行うために3D描画システムの試作を行った。
 
-\subsection{数値・単位}
-単位は原則として国際単位系(SI)を用い、数値はアラビア数字を使用してください。
+\subsection{実装環境}
+ハードウェアはHoloLensを利用し、開発環境はWindows10でUnity\cite{tex9}を使用した。Unityとはユニティ・テクノロジーズ社が提供するゲーム開発プラットフォームであり、3D・2D描画やサウンド再生等を備えた統合開発環境である。また、Unity用のHoloLens向けのツールキットであるHoloToolkit-Unityの導入を行った。
 
-\subsection{数式}
-原則として、すべての数式に式番をつけてください。式番は通し番号とし、(1), (2), $ \cdots $ のように表します。参照する場合は(1)式, (2)式, $ \cdots $とします。分数式は、式として独立したものは
-\begin{equation}
-	\frac{a+b}{c+d}
-	\label{formula}
-\end{equation}
-のように改行して書きますが、本文と同じ行の場合には $ (a+b) / (c+d) $のように書いてください。
+\subsection{実装手順}
+Unityを起動し、まずメッシュが手に追従するものを作成した。ここでは3D ObjectとしてCubeを追加した。次にSpatialMappingとInputManagerを追加し、カメラをデフォルトのものからHoloLendsCameraに変更した。HoloLensはSpatialMappingと呼ばれる周辺の凹凸を判別する機能を持っており、これによって現実空間にあたり判定をつけ、落下してくる仮想のオブジェクトを現実空間に配置できる。また、Unityで開発する際、この凹凸の情報はメッシュデータとして保持している。InputManagerはキー等の入力の認識を行うが、ここではジェスチャの認識を行った。次に手の検出や位置を受け取るスクリプトを作成し、手の検出と手の状態を保持できるようにし、手の位置を取得をできるようにした。加えて、手の位置にオブジェクトを追従させるようにした。Trail Renderer\cite{tex10}というオブジェクトが動く際に、オブジェクトの後ろに軌跡を作るスクリプトを使用し、3D空間上に複数の線を軌跡を描画できるようにした。最後にそのままの状態だと3D空間上にオブジェクトであるCubeが残ってしまうので、Cubeを透明にする処理を行った。
 
-\subsection{定理・定義・補題}
-定義、定理、補題などの番号は通し番号とし、【定義1】、【定理1】、【補題1】$ \cdots $のように表します。参照する場合は括弧を取り、定義1、定理1などとします。
+\subsection{動作確認}
+3D描画システムの試作を行い、HoloLens上でシステムを動かして、動作を確認した。図\ref{fig:linedraw}のように3D空間上でタップアンドホールドをした状態を維持している間は、線が表示されるようにし、ホールドを解除すると表示をやめるようにした。3D空間上で手前から奥に線を引くことができることも確認できた。線が表示される位置がタップアンドホールドした位置より少し離れた場所に表示されているので、今後調整する必要があると考えられる。また、図\ref{fig:rittai}のように3D空間上に立体の図形を描き、表示できることも確認できた。
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{図・表}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{番号}
-図、表の番号は、それぞれ、図1,\,図2,\,$ \cdots $、Fig.1, \, Fig.2, \, $ \cdots $、表1,\,表2,\, $ \cdots $、Table\,1,\,Table\,2,\, $ \cdots $のように通し番号としてください。写真は図として扱います。
-
-\subsection{見出し}
-図の場合にはその下に、表の場合にはその上に、番号とともに見出しを入れてください。
-{\bf 和文原稿の場合には、日本語の見出し、英語の見出しの順で両方を入れてください。} 
-英文原稿の場合には、英語の見出しのみを入れてください。
-
-\subsection{引用}
-本文中で図、表を引用する場合には、和文原稿の場合、それぞれ、図1,\,図2,\,$ \cdots $、表1,\,表2,\, $ \cdots $とし、英文原稿の場合は、それぞれ、Fig.1, \, Fig.2, \, $ \cdots $、Table\,1,\,Table\,2,\, $ \cdots $とします。
-
-\subsection{サイズ}
-図、表の刷り上がり寸法は、横幅8cm以内(片段)と横幅17cm以内(両段)の二通りとします。図や表中の文字は適切な大きさで、本文との整合性に注意してください。
-
-\subsection{図、表の例}
-図と表の記載例をこの「原稿執筆の手引き」中に示します（図\ref{fig:example1}、および表\ref{table:example2}参照)。
-
-\begin{figure}[tb]
-	\begin{center}
-    \includegraphics[width=70mm]{fig1.eps}
-%\includegraphics[width=70mm]{fig1.jpg} 
-	\caption{楕円と五角形}		%和文 caption
-	\ecaption{Ellipse and Pentagon.} %英文 caption
-	\label{fig:example1}
-	\end{center}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[clip,height=5.0cm,width=7.0cm]{./linedraw.eps}
+    \caption{3D空間上に線を描画}
+    \ecaption{Ellipse and Pentagon.}
+    \label{fig:linedraw}
+  \end{center}
 \end{figure}
 
-\begin{table}[t]
-	\begin{center}
-	\caption{図形の辺と頂点}		%和文 caption
-	\ecaption{Sides and Apices of Figures.} %英文 caption
-	\label{table:example2}
-	\begin{tabular}[hbt]{c c c}
-	\hline
-	\bf 図形 & \bf 辺の数 & \bf 頂点の数\\
-	\hline
-	三角形 & 3 & 3\\
-	五角形 & 5 & 5\\
-	楕円 & なし & なし\\
-	\hline
-	\end{tabular}
-	\end{center}
-\end{table}
-
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[clip,height=5.0cm,width=7.0cm]{./rittai.eps}
+    \caption{3D空間上に立体の図形を描画}
+    \ecaption{Ellipse and Pentagon.}
+    \label{fig:rittai}
+  \end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{脚注}
+\section{おわりに}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-脚注は本文の一部分として作成してください。
+3D空間上の任意の場所にメモを置くことができ、複数人で使用できる3Dアイデアノートシステムの提案を行った。本システムは図形や文字だけでなく、音声によるメモを残すことも可能にする。
 
-\subsection{引用}
-脚注の引用は引用箇所の肩に $^ {1,2,3, \cdots} $ あるいは $^ {*,**,***,\cdots} $ 、$^ {\dag, \ddag, \S, \P} $などとつけてください\footnote{脚注はここに書いてください。}。
+また、本システムを作成する前に動作を確認するためにシステムの試作を行った。試作したシステムをHoloLens上で動かし、3D空間上に線を描いたり、立体の図形を描くことができることを確認した。
 
-\subsection{脚注の記載}
-脚注は、本文の下に境界を表す横線を引き、その下に記載してください。なお、脚注も原稿のこま内に書いてください。
+今後は試作した3D描画システムを調整し、その他の機能についても実装を行っていく。また、メモを共有する機能で、アンカーを設置して位置合わせを行う際に、アンカーと追加した物体の距離がどの程度大きくても同期できるか予備実験を行う必要があると考えられる。その後、本システムの実装をして、本実験を行い、評価を行っていく予定である。
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{参考文献}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-参考文献は本文の一部分として作成してください。
-
-\subsection{引用}
-参考文献の引用は引用箇所に$^ {\scriptsize [1],[2],[4-6]} $などとつけてください。
-
-\subsection{文献の記載}
-参考文献は本文の末尾にまとめてください。雑誌の場合は、著者名, 題目, 雑誌名(略記にて可), 巻(太字), 号, ページ, 発行西暦年を、書籍の場合には、著者(または編者)名, 書名(編者), 発行所, ページ,発行西暦年の順に記載してください。なお、著者(または編者)名の後はコロン「:」、題目の後はセミコロン「;」、そのほかはカンマ「,」で区切り、発行西暦年は小括弧「()」で囲んでください。
-
-著者(または編者)名は、和文の場合、姓のみ羅列し、カンマ「,」で区切ってください。著者が多い場合には、代表的な著者名を記載し、その他の著者名を「他」で省略することができます。英文の場合には、「姓,名のイニシャル.」の羅列とし、カンマ「,」で区切ってください。著者が多い場合には、和文の場合と同様に「et al.」で省略することができます。\\
-
-\noindent{（記載例）}
-	{\small
-	\begin{itemize}
-	\item[{[1]}]
-		西田, 井上, 吉川:
-		ヒューマンインタフェース学会論文誌原稿執筆の手引き;
-		ヒューマンインタフェース学会論文誌,
-		{\bf Vol.1}, No.1, pp.1-10 (1999).
-	\item[{[2]}]
-		Nishida,S., Inoue,K., Yoshikawa,H.:
-		Guideline of Writing Manuscript for the Transactions of Human Interface Society;
-		The Transactions of Human Interface Society,
-		{\bf Vol.1}, No.1, pp.1-10 (1999).
-	\item[{[3]}]
-		渋谷,高橋,他:
-		21世紀の学会のあり方について;
-		ヒューマンインタフェース学会誌,
-		{\bf Vol.1}, No.1, pp.21-24 (1999).
-	\item[{[4]}]
-		高橋,渋谷,加藤:
-		学会におけるネットワーク情報サービス;
-		ヒューマンインタフェース(田村編),
-		オーム社, 第25章 (1998).
-	\item[{[5]}]
-		Takahashi,M., Shibuya,Y., et al.:
-		Network Information Service in Symposium;
-		Human Interface (Tamura,H. ed.),
-		Ohmsha, Chap.25 (1998).
-	\end{itemize}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{文字数・大きさ}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{文字数}
-原稿は、A4サイズの上質紙にカメラレディで作成してください。作成した原稿は、原寸大でA4サイズの論文誌にオフセット印刷されます。本文の文字数は、25文字×49行の2段組とします。各部のマージン(余白)は表\ref{table:margin}の通りです。
-
-\begin{table}[bt]
-	\begin{center}
-	\caption{原稿のマージン}		%和文 caption
-	\ecaption{Margins of Manuscript.} 	%英文 caption
-	\label{table:margin}
-	\begin{tabular}[hbt]{c r}
-	\hline
-	\bf 各部 & \bf マージン\\
-	\hline
-	用紙上端からタイトル(1頁目) & 37 mm\\
-	用紙上端から本文(2頁目以降) & 30 mm\\
-	用紙下端から本文(全頁) & 15 mm\\
-	用紙左端から本文(全頁) & 20 mm\\
-	用紙右端から本文(全頁) & 20 mm\\
-	段組中央(全頁) & 10 mm\\
-	\hline
-	\end{tabular}
-	\end{center}
-\end{table}
-
-\subsection{文字の大きさ}
-文字の大きさは、原則として表\ref{table:charsize}の通りとします。
-
-\begin{table}[tbh]
-	\begin{center}
-	\caption{文字の大きさ}		%和文 caption
-	\ecaption{Character Size.} 	%英文 caption
-	\label{table:charsize}
-	\begin{tabular}[hbt]{c c r}
-	\hline
-	\bf 文字 & \bf 書体 & \bf ポイント\\
-	\hline
-	和文表題 & ゴチック体 & 16.5\\
-	和文著者名 & 明朝体 & 14.0\\
-	英文表題(和文原稿) & Times(Bold) & 12.0\\
-	英文著者名(和文原稿) & Times & 12.0\\
-	英文表題(英文原稿) & Times(Bold) & 14.0\\
-	英文著者名(英文原稿) & Times & 12.0\\
-	``Abstract'' & Times(Bold) & 9.0\\
-	英文要旨本文 & Times & 9.0\\
-	``Keywords'' & Times(Bold) & 9.0 \\
-	キーワード & Times & 9.0\\ \vspace{-0.7mm}
-	章・節見出し & ゴチック体 & 9.0\\
-	& Times(Bold) & \\
-	項見出し & 明朝体・Times & 9.0\\
-	図等見出し & 明朝体・Times & 9.0\\
-	本文 & 明朝体・Times & 9.0\\
-	参考文献 & 明朝体・Times & 8.0\\ \vspace{-0.7mm}
-	脚注 & 明朝体・Times &  8.0\\
-	\hline
-	\end{tabular}
-	\end{center}
-\end{table}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\LaTeX{}による原稿の作成}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\LaTeX{}\cite{tex1,tex2}により原稿を作成する場合には、スタイルファイル{\tt hissymp.cls}(和文原稿用)、または{\tt ehissymp.cls}(英文原稿用)を利用してください。これをドキュメントスタイルとして指定することで、この「原稿執筆の手引き」に準拠したフォーマットの原稿を簡単に作成することができます。
-
-スタイルファイルは、ヒューマンインタフェース学会のWeb Siteからダウンロードすることができます。なお、\LaTeX{}により、原稿を作成した場合でも、A4サイズ上質紙にプリントアウトしたカメラレディの原稿を事務局まで提出してください。
-
-なお、ヒューマンインタフェース学会では、\LaTeX{}以外にも、各種パソコンのワードプロセッサに対応した原稿フォーマットテンプレートを作成する予定です。作成次第、学会のWeb Siteに掲載します。この場合でも、A4サイズ上質紙にプリントアウトしたカメラレディの原稿を事務局まで提出してください。
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{謝辞}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-この「原稿執筆の手引き」を作成するにあたり、日本計測自動制御学会をはじめとする諸先輩学会の原稿執筆の手引きを参考にさせていただきました。ここに感謝の意を表します。また、\LaTeX{}のスタイルファイルを作成するにあたり、その元となるスタイルファイルを快く提供していただいた日本VR学会に深く感謝いたします。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 　参考文献
@@ -333,42 +184,49 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 \begin{thebibliography}{99}
 \bibitem{tex1}
         山本, 椎尾:
-        空気ペン―空間への描画による情報共有－,
+        空気ペン―空間への描画による情報共有－;
         情報処理学会全国大会講演論文集,
         {\bf Vol.59}, No.4, pp.39-40(1999)
 \bibitem{tex2}
 	椎尾, 山本:
-	コミュニケーションツールのための簡易型ARシステム,
+	コミュニケーションツールのための簡易型ARシステム;
 	コンピュータソフトウェア, 
         {\bf Vol.19}, No.4, pp.246-253(2002).
 \bibitem{tex3}
 	高山, 瑞慶山, 田野, 岩田, 橋山:
-	実世界コンテキスト・情報を用いたユビキタスインフォーマルコミュニケーションの実装と評価,
+	実世界コンテキスト・情報を用いたユビキタスインフォーマルコミュニケーションの実装と評価;
 	ヒューマンインタフェースシンポジウム2005,
         pp.955-958(2005).
 \bibitem{tex4}
         Tano, S., Takayama, T., Iwata, M. and Hashiyama, T.:
-        Wearable Computer for Ubiquitous Informal Communication,
+        Wearable Computer for Ubiquitous Informal Communication;
         Sixth International Workshop on Smart Appliances and Wearable Computing-IWSAWC 2006-(at 26th IEEE International Conference on Distributed Computing Systems ICDCS),
         pp.1-8(2006).
 \bibitem{tex5}
         長田, 佐々木, 島田, 佐藤:
-        スマートグラスを用いた仮想空間への手書き情報共有システム,
+        スマートグラスを用いた仮想空間への手書き情報共有システム;
         情報処理学会第77回全国大会論文集,
         3-205, 206(2015)
 \bibitem{tex6}
-        Microsoft:HoloToolkit,\url{https://github.com/Microsoft/HoloToolkit-Unity}
+        Microsoft Inc:
+        HoloLens;
+        \url{https://www.microsoft.com/ja-jp/hololens}
 \bibitem{tex7}
-        HoloToolkit-UnityのSharingの仕組みをできるだけ簡単に理解する: 
+        Microsoft Inc:
+        HoloToolkit;
+        \url{https://github.com/Microsoft/HoloToolkit-Unity}
+\bibitem{tex8}
+        HoloToolkit-UnityのSharingの仕組みをできるだけ簡単に理解する; 
         \url{http://qiita.com/miyaura/items/da1d7bd253c3299327ba}
+\bibitem{tex9}
+        Unity Technologies Inc:
+        Unity;
+        \url{https://unity3d.com/jp/unity}
+\bibitem{tex10}
+        TrailRenderer;
+        \url{https://docs.unity3d.com/ja/540/ScriptReference/TrailRenderer.html}
 
 \end{thebibliography}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-付録は参考文献の後につけ、章見出しを無番号で「付録」とします。必要ならば節見出しとして「付録1.,付録2.,\,$ \cdots $\,」などを用いて区分けしてください。
 
 
 \end{document}
