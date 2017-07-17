@@ -40,11 +40,11 @@ Taiki Maruya\thanks{Graduate School of Information Systems, The University of El
 %maketitle は abstract と keyword の後に入れてください。
 
 \begin{abstract}
-This paper describes the way how to write your manuscript for Human Interface Symposium.
+The idea suddenly come up and we currently take notes using paper and PC. However, it is difficult to take notes in places where there is no desk or white board  when ideas come up . Also, ideas may come to mind when talking with friends. In this study, we propose a 3D idea note system for multiple people.
 \end{abstract}
 
 \begin{keyword}	
-keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
+3D, note taking, sharing, multimodal
 \end{keyword}
 
 \maketitle	
@@ -81,9 +81,9 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[clip,width=7.0cm]{./3d_draw.eps}
+    \includegraphics[clip,height=5.0cm,width=6.0cm]{./3d_draw.eps}
     \caption{3D描画によるメモ}
-    \ecaption{Ellipse and Pentagon.}
+    \ecaption{Notes drawn in 3D.}
     \label{fig:3d_draw}
   \end{center}
 \end{figure}
@@ -95,22 +95,24 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
   \begin{center}
     \includegraphics[clip,width=7.0cm]{./tennomemo.eps}
     \caption{点の情報としてメモを残す}
-    \ecaption{Ellipse and Pentagon.}
+    \ecaption{Notes left as information on points.}
     \label{fig:tennomemo}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[clip,height=5.0cm,width=6.0cm]{./onpu_memo.eps}
+    \caption{3D音符の透明度を変化}
+    \ecaption{Change transparency of 3D notes.}
+    \label{fig:onpu_memo}
   \end{center}
 \end{figure}
 
 \subsubsection{音声によるメモ}
 ユーザが思い浮かんだふとしたアイデアは短い言葉だけで表すことが難しい場合もある。そこで、音声によるメモを残す手法を提案する。任意の3D空間上でタップをすることで音声の録音を開始し、もう一度タップすること録音を終了する。その場には3D音符として残る。音声によるメモを聞く際には、3D音符をタップすることで再生することができるようにする。また、音声によるメモが新しいかどうかを一目でわかるように、3D音符の透明度を変化させて表示する手法を提案する(図\ref{fig:onpu_memo})。具体的には古いメモはより透明になるように3D音符を表示する。
 
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[clip,height=5.0cm,width=6.0cm]{./onpu_memo.eps}
-    \caption{3D音符の透明度を変化}
-    \ecaption{Ellipse and Pentagon.}
-    \label{fig:onpu_memo}
-  \end{center}
-\end{figure}
+
 
 \subsection{メモを操作}
 広い空間上にメモを残す場合、近くにあるメモだけでなく、遠くにあるメモを移動させることも必要となる。そこで、遠くにあるメモを視線で選択をし、タップアンドホールドを維持した状態で移動させるインタラクションを提案する。また、視線上に複数のメモがある場合、その中の一つをどうやって選択するかという問題が発生することが考えられる。そこで、音声入力によってメモの選択の変更を行う手法を提案する(図\ref{fig:sentaku_memo})。
@@ -118,8 +120,8 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 \begin{figure}[h]
   \begin{center}
     \includegraphics[clip,height=5.0cm,width=6.0cm]{./sentaku_memo.eps}
-    \caption{視線上の複数のメモを選択}
-    \ecaption{Ellipse and Pentagon.}
+    \caption{視線上にある複数のメモの中の一つを選択}
+    \ecaption{Select one of multiple notes on line of sight.}
     \label{fig:sentaku_memo}
   \end{center}
 \end{figure}
@@ -127,8 +129,8 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 \begin{figure*}[t]
   \begin{center}
     \includegraphics[clip,height=10.0cm,width=14.0cm]{./sharing.eps}
-    \caption{アンカーを設置して位置合わせを行い共有}
-    \ecaption{Ellipse and Pentagon.}
+    \caption{アンカーを設置して座標の位置合わせを行い共有}
+    \ecaption{Set up an anchor, align coordinates and share.}
     \label{fig:sharing}
   \end{center}
 \end{figure*}
@@ -154,7 +156,7 @@ Unityを起動し、まずメッシュが手に追従するものを作成した
   \begin{center}
     \includegraphics[clip,height=5.0cm,width=7.0cm]{./linedraw.eps}
     \caption{3D空間上に線を描画}
-    \ecaption{Ellipse and Pentagon.}
+    \ecaption{Line drawn in 3D.}
     \label{fig:linedraw}
   \end{center}
 \end{figure}
@@ -163,7 +165,7 @@ Unityを起動し、まずメッシュが手に追従するものを作成した
   \begin{center}
     \includegraphics[clip,height=5.0cm,width=7.0cm]{./rittai.eps}
     \caption{3D空間上に立体の図形を描画}
-    \ecaption{Ellipse and Pentagon.}
+    \ecaption{Three-dimensional figure drawn in 3D.}
     \label{fig:rittai}
   \end{center}
 \end{figure}
