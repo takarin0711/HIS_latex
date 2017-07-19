@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.7.9)  19 JUL 2017 18:52
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.1.6)  20 JUL 2017 06:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -114,57 +114,63 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
+File: ./concept.eps Graphic file (type eps)
+
+<./concept.eps>
 File: ./3d_draw.eps Graphic file (type eps)
+ <./3d_draw.eps>
 
-<./3d_draw.eps>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: ./tennomemo.eps Graphic file (type eps)
- <./tennomemo.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+<./tennomemo.eps>
 File: ./onpu_memo.eps Graphic file (type eps)
-<./onpu_memo.eps>
+ <./onpu_memo.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[2]
 File: ./sentaku_memo.eps Graphic file (type eps)
-<./sentaku_memo.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ <./sentaku_memo.eps>
 File: ./sharing.eps Graphic file (type eps)
-<./sharing.eps> [2] [3]
+ <./sharing.eps> [3]
 File: ./linedraw.eps Graphic file (type eps)
  <./linedraw.eps>
 File: ./rittai.eps Graphic file (type eps)
  <./rittai.eps>
-Underfull \hbox (badness 5756) in paragraph at lines 207--211
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+Underfull \hbox (badness 5756) in paragraph at lines 224--228
 \OT1/cmr/m/n/9 IWSAWC 2006-(at 26th IEEE In-ter-na-tional
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 219.
+(Font)              <9> on input line 236.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 219.
+(Font)              <6> on input line 236.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
 []\OT1/cmr/m/n/9 Microsoft Inc: HoloLens; $\OT1/cmtt/m/n/9 https : / / www .
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 232--234
+Underfull \hbox (badness 4303) in paragraph at lines 249--251
 []\OT1/cmr/m/n/9 TrailRenderer; $\OT1/cmtt/m/n/9 https : / / docs . unity3d . c
 om / ja /
  []
 
-[4] (./symptebiki.aux) ) 
+[5
+
+] (./symptebiki.aux) ) 
 Here is how much of TeX's memory you used:
- 864 strings out of 494001
- 9192 string characters out of 6157278
- 74525 words of memory out of 5000000
- 4363 multiletter control sequences out of 15000+600000
+ 867 strings out of 494001
+ 9229 string characters out of 6157278
+ 75525 words of memory out of 5000000
+ 4365 multiletter control sequences out of 15000+600000
  20744 words of font info for 79 fonts, out of 8000000 for 9000
  745 hyphenation exceptions out of 8191
  26i,10n,25p,973b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on symptebiki.dvi (4 pages, 25060 bytes).
+Output written on symptebiki.dvi (5 pages, 27300 bytes).
