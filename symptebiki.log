@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.1.6)  17 JUL 2017 00:35
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.7.9)  19 JUL 2017 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -138,21 +138,21 @@ File: ./linedraw.eps Graphic file (type eps)
  <./linedraw.eps>
 File: ./rittai.eps Graphic file (type eps)
  <./rittai.eps>
-Underfull \hbox (badness 5756) in paragraph at lines 203--207
+Underfull \hbox (badness 5756) in paragraph at lines 207--211
 \OT1/cmr/m/n/9 IWSAWC 2006-(at 26th IEEE In-ter-na-tional
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 215.
+(Font)              <9> on input line 219.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 215.
+(Font)              <6> on input line 219.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
 []\OT1/cmr/m/n/9 Microsoft Inc: HoloLens; $\OT1/cmtt/m/n/9 https : / / www .
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 228--230
+Underfull \hbox (badness 4303) in paragraph at lines 232--234
 []\OT1/cmr/m/n/9 TrailRenderer; $\OT1/cmtt/m/n/9 https : / / docs . unity3d . c
 om / ja /
  []
@@ -167,4 +167,4 @@ Here is how much of TeX's memory you used:
  745 hyphenation exceptions out of 8191
  26i,10n,25p,973b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on symptebiki.dvi (4 pages, 25036 bytes).
+Output written on symptebiki.dvi (4 pages, 25060 bytes).
