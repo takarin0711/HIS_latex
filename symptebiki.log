@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.7.9)  20 JUL 2017 22:35
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.sjis) (TeX Live 2013/W32TeX) (format=platex 2017.1.6)  21 JUL 2017 08:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -166,4 +166,4 @@ Here is how much of TeX's memory you used:
  745 hyphenation exceptions out of 8191
  26i,10n,25p,858b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on symptebiki.dvi (4 pages, 25604 bytes).
+Output written on symptebiki.dvi (4 pages, 25576 bytes).
